@@ -1,6 +1,5 @@
 import React from "react";
 import eule from "../images/eule.svg";
-import backgroundImage from "../images/jumbotronBackground.jpg";
 
 const styles = {
   eule: {
@@ -13,8 +12,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: `1.45rem 1.0875rem`,
-
-    background: `url(${backgroundImage})`
+    backgroundColor: "#cfb877" //"#e79f29"
   }
 };
 const Jumbotron = ({ title }) => (

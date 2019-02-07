@@ -7,10 +7,7 @@ const Header = ({ siteTitle }) => (
   <header>
     <div className="header">
       <Link className="headerLink" to="/">
-        Start
-      </Link>
-      <Link className="headerLink" to="/about">
-        Über mich
+        Home
       </Link>
       <Link className="headerLink" to="/angebot">
         Angebot
