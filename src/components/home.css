@@ -1,0 +1,96 @@
+.homepage__flex-container {
+  background: url("../images/hintergrundbild.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+}
+
+.homepage__main {
+  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -ms-flex-direction: column;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-box-pack: center;
+  -moz-box-pack: center;
+  flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+}
+.homepage__address {
+  text-align: center;
+}
+.homepage__address-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+.homepage__address-text,
+.homepage__link {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.6px;
+  text-decoration: none;
+}
+.homepage__footer {
+  text-align: right;
+}
+.homepage__footer-image {
+  height: 158px;
+  width: 170px;
+}
+
+@media screen and (min-width: 700px) {
+  .homepage__footer {
+    padding: 0 35px 35px 0;
+  }
+
+  .homepage__main {
+    padding-top: 35px;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .homepage__main {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+  }
+
+  .homepage__address {
+    text-align: left;
+  }
+
+  .homepage__address-name {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .homepage__address-text {
+    font-size: 14px;
+  }
+}
