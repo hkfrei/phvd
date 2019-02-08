@@ -3,6 +3,8 @@ import SEO from "../components/seo";
 import Jumbotron from "../components/jumbotron";
 import Layout from "../components/layout";
 import Content from "../components/content";
+import Contact from "../components/contact";
+import "../components/home.css";
 
 const IndexPage = () => (
   <div>
@@ -10,8 +12,14 @@ const IndexPage = () => (
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Jumbotron title="" />
       <Content>
-        <h1>Hi from the Home Page</h1>
-        <p>Welcome to the Home Page</p>
+        <div className="homeContainer">
+          <div className="homeContainer___about">
+            <h2>Über mich:</h2>
+          </div>
+          <div className="homeContainer__contact">
+            <Contact />
+          </div>
+        </div>
       </Content>
     </Layout>
   </div>

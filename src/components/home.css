@@ -1,0 +1,20 @@
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.homeContainer__contact {
+  width: 50%;
+}
+
+.homeContainer__about {
+  width: 50%;
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+  .homeContainer__about,
+  .homeContainer__contact {
+    width: 100%;
+  }
+}
