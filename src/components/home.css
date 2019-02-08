@@ -3,12 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.homeContainer__contact {
-  width: 50%;
-}
-
+.homeContainer__contact,
 .homeContainer__about {
-  width: 50%;
+  width: 45%;
+  padding: 0 8px;
 }
 
 /* media queries */

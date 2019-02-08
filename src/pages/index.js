@@ -4,6 +4,7 @@ import Jumbotron from "../components/jumbotron";
 import Layout from "../components/layout";
 import Content from "../components/content";
 import Contact from "../components/contact";
+import About from "../components/about";
 import "../components/home.css";
 
 const IndexPage = () => (
@@ -13,8 +14,8 @@ const IndexPage = () => (
       <Jumbotron title="" />
       <Content>
         <div className="homeContainer">
-          <div className="homeContainer___about">
-            <h2>Über mich:</h2>
+          <div className="homeContainer__about">
+            <About />
           </div>
           <div className="homeContainer__contact">
             <Contact />
