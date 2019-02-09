@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/links`,
+        path: `${__dirname}/src/data`,
         name: "link-markdown"
       }
     },
