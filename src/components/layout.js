@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Header />
         <div>
           <main>{children}</main>
@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
             <footer>© {new Date().getFullYear()}, Philippe van Driel </footer>
           </Content>
         </div>
-      </>
+      </div>
     )}
   />
 );

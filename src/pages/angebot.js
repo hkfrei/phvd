@@ -22,7 +22,7 @@ const AngebotPage = () => (
     <Content>
       <h2>Angebote für Einzelpersonen:</h2>
       <h4>Ansatz: 100.- / h</h4>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>Einzelsupervision / kollegiale Beratung</h3>
         <List>
           <ListItem>
@@ -41,7 +41,7 @@ const AngebotPage = () => (
           </ListItem>
         </List>
       </Paper>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>Coaching</h3>
         <List>
           <ListItem>
@@ -58,7 +58,7 @@ const AngebotPage = () => (
       <Divider />
       <h2>Angebote für Firmen/Gruppen:</h2>
       <h4>Ansatz: 200.- / h</h4>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>Supervision</h3>
         <List>
           <ListItem>
@@ -77,7 +77,7 @@ const AngebotPage = () => (
           </ListItem>
         </List>
       </Paper>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>Teamentwicklung</h3>
         <List>
           <ListItem>
@@ -86,7 +86,7 @@ const AngebotPage = () => (
           </ListItem>
         </List>
       </Paper>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>MI</h3>
         <List>
           <ListItem>
@@ -95,7 +95,7 @@ const AngebotPage = () => (
           </ListItem>
         </List>
       </Paper>
-      <Paper elevation="1" style={styles.angebotPaper}>
+      <Paper elevation={1} style={styles.angebotPaper}>
         <h3>Schulung und Weiterbildung</h3>
         <List>
           <ListItem>
