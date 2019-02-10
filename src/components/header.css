@@ -13,6 +13,11 @@
   margin: 0 12px;
 }
 
+a.headerLink.active {
+  font-size: bold;
+  color: white;
+}
+
 .headerLink:hover {
   color: #3c2332;
   font-weight: bold;

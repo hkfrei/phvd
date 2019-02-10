@@ -6,13 +6,25 @@ import "./header.css";
 const Header = ({ siteTitle }) => (
   <header>
     <div className="header">
-      <Link className="headerLink" to="/">
+      <Link
+        className="headerLink"
+        to="/"
+        activeStyle={{ color: "white", fontWeight: "bold" }}
+      >
         Home
       </Link>
-      <Link className="headerLink" to="/angebot">
+      <Link
+        className="headerLink"
+        to="/angebot"
+        activeStyle={{ color: "white", fontWeight: "bold" }}
+      >
         Angebot
       </Link>
-      <Link className="headerLink lastHeaderLink" to="/links">
+      <Link
+        className="headerLink lastHeaderLink"
+        to="/links"
+        activeStyle={{ color: "white", fontWeight: "bold" }}
+      >
         Links
       </Link>
       <img src={phvd} alt="phvd" className="headerImage" />

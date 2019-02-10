@@ -28,7 +28,6 @@ const LinkPage = data => {
       `}
       render={data => {
         const links = data.allMarkdownRemark.edges;
-        console.log(links);
         return (
           <Layout>
             <SEO title="Links" />
