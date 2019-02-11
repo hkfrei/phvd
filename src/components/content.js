@@ -3,7 +3,7 @@ const styles = {
   content: {
     maxWidth: "960px",
     margin: "0 auto",
-    padding: "28px 8px"
+    padding: "56px 16px"
   }
 };
 const Content = ({ children }) => (

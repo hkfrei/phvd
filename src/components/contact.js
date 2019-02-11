@@ -66,7 +66,7 @@ const Contact = () => (
             </a>
             <br />
             <Email />{" "}
-            <a style={styles.link} href={`${mail}`}>
+            <a style={styles.link} href={`mailto:${mail}`}>
               {mailWritten}
             </a>
             <br />

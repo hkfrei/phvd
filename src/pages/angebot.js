@@ -9,7 +9,6 @@ import Divider from "@material-ui/core/Divider";
 
 const styles = {
   angebotHeader: {
-    color: "#58534a",
     fontSize: "30px",
     padding: "20px 0 0 0"
   }

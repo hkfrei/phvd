@@ -27,7 +27,9 @@ const Header = ({ siteTitle }) => (
       >
         Links
       </Link>
-      <img src={phvd} alt="phvd" className="headerImage" />
+      <Link to="/">
+        <img src={phvd} alt="phvd" className="headerImage" />
+      </Link>
     </div>
   </header>
 );
