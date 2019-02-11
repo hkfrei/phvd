@@ -2,17 +2,16 @@ backend:
   name: github
   repo: hkfrei/phvd
 
-media_folder: static/assets
-public_folder: assets
+media_folder: src/images
+public_folder: ../../images
 
 collections:
-  - name: blog
-    label: Blog
-    folder: src/data/blog
+  - name: angebot
+    label: Angebot
+    folder: src/data/angebote
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: type, label: Type, widget: select, options: [einzeln, gruppen] }
       - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
