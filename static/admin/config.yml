@@ -1,5 +1,6 @@
 backend:
-  name: hkfrei/phvd
+  name: github
+  repo: hkfrei/phvd
 
 media_folder: static/assets
 public_folder: assets
