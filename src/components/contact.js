@@ -1,5 +1,5 @@
 import React from "react";
-import portrait from "../images/portrait.jpeg";
+import { graphql, StaticQuery } from "gatsby";
 import Phone from "@material-ui/icons/Phone";
 import Email from "@material-ui/icons/Email";
 import Share from "@material-ui/icons/Share";
@@ -16,28 +16,70 @@ const styles = {
   }
 };
 const Contact = () => (
-  <div>
-    <img src={portrait} alt="portrait" style={styles.portrait} />
+  <StaticQuery
+    query={graphql`
+      query {
+        markdownRemark(fileAbsolutePath: { regex: "/data/contact/.*.md$/" }) {
+          html
+          frontmatter {
+            title
+            mail
+            phone
+            linkedin
+            foto {
+              childImageSharp {
+                fluid {
+                  base64
+                  src
+                  srcSet
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const {
+        title,
+        phone,
+        mail,
+        linkedin,
+        foto
+      } = data.markdownRemark.frontmatter;
+      const phoneLink = phone.replace(/\s+/g, "");
+      const mailWritten = mail.replace("@", "(at)");
 
-    <h3>PHILIPPE VAN DRIEL</h3>
-    <span>
-      <Phone />{" "}
-      <a style={styles.link} href="tel:0041797276503">
-        +41 (0)79 727 65 03
-      </a>
-      <br />
-      <Email />{" "}
-      <a style={styles.link} href="mailto:info@phvd.ch">
-        info(at)phvd.ch
-      </a>
-      <br />
-      <Share />{" "}
-      <a style={styles.link} href="https://ch.linkedin.com">
-        LinkedIn
-      </a>
-    </span>
-    <br />
-  </div>
+      return (
+        <div>
+          <img
+            src={`${foto.childImageSharp.fluid.src}`}
+            alt="portrait"
+            style={styles.portrait}
+          />
+
+          <h3>{title}</h3>
+          <span>
+            <Phone />{" "}
+            <a style={styles.link} href={`tel:${phoneLink}`}>
+              {phone}
+            </a>
+            <br />
+            <Email />{" "}
+            <a style={styles.link} href={`${mail}`}>
+              {mailWritten}
+            </a>
+            <br />
+            <Share />{" "}
+            <a style={styles.link} href={`${linkedin}`}>
+              LinkedIn
+            </a>
+          </span>
+          <br />
+        </div>
+      );
+    }}
+  />
 );
 
 export default Contact;
