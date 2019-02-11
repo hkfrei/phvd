@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import phvd from "../images/phvd.svg";
+import phvd from "../../static/images/phvd.svg";
 import "./header.css";
 
 const Header = ({ siteTitle }) => (
