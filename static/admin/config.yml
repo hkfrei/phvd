@@ -17,3 +17,15 @@ collections:
       - { name: title, label: Title }
       - { name: type, label: Type, widget: select, options: [einzeln, gruppen] }
       - { name: body, label: Body, widget: markdown }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/data/contact/contact.md"
+        label: "Kontakt"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Foto", name: "foto", widget: "image" }
+          - { label: "Telefon", name: "phone", widget: string }
+          - { label: "Mail", name: "mail", widget: "string" }
+          - { label: "Linkedin", name: "linkedin", widget: "string" }
