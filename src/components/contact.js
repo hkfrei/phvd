@@ -7,7 +7,8 @@ import Share from "@material-ui/icons/Share";
 
 const styles = {
   portrait: {
-    borderRadius: "5px"
+    border: "3px solid #cfb27c",
+    borderRadius: "100px"
   },
   link: {
     textDecoration: "none",
