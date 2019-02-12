@@ -61,17 +61,17 @@ const Contact = () => (
 
           <h3>{title}</h3>
           <span>
-            <Phone />{" "}
+            <Phone style={{ maxWidth: "24px", maxHeight: "24px" }} />{" "}
             <a style={styles.link} href={`tel:${phoneLink}`}>
               {phone}
             </a>
             <br />
-            <Email />{" "}
+            <Email style={{ maxWidth: "24px", maxHeight: "24px" }} />{" "}
             <a style={styles.link} href={`mailto:${mail}`}>
               {mailWritten}
             </a>
             <br />
-            <Share />{" "}
+            <Share style={{ maxWidth: "24px", maxHeight: "24px" }} />{" "}
             <a style={styles.link} href={`${linkedin}`}>
               LinkedIn
             </a>

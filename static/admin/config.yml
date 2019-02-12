@@ -17,14 +17,28 @@ collections:
       - { name: title, label: Title }
       - { name: type, label: Type, widget: select, options: [einzeln, gruppen] }
       - { name: body, label: Body, widget: markdown }
-  - name: "pages"
-    label: "Pages"
+  - name: links
+    label: Links
+    folder: src/data/links
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: url, label: URL, widget: string }
+      - { name: description, label: beschrieb, widget: text }
+  - name: pages
+    label: Pages
     files:
-      - file: "src/data/contact/contact.md"
-        label: "Kontakt"
-        name: "contact"
+      - file: src/data/contact/contact.md
+        label: Kontakt
+        name: contact
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Telefon", name: "phone", widget: string }
-          - { label: "Mail", name: "mail", widget: "string" }
-          - { label: "Linkedin", name: "linkedin", widget: "string" }
+          - { label: Title, name: title, widget: string }
+          - { label: Telefon, name: phone, widget: string }
+          - { label: Mail, name: mail, widget: string }
+          - { label: Linkedin, name: linkedin, widget: string }
+      - file: src/data/work/ausbildung.md
+        label: Aus- und Weiterbildung
+        name: ausbildung
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
