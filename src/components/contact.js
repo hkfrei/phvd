@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
+import Image from "gatsby-image";
 import Phone from "@material-ui/icons/Phone";
 import Email from "@material-ui/icons/Email";
 import Share from "@material-ui/icons/Share";
 
 const styles = {
   portrait: {
-    borderRadius: "5px",
-    width: "100px"
+    borderRadius: "5px"
   },
   link: {
     textDecoration: "none",
@@ -28,8 +28,9 @@ const Contact = () => (
             linkedin
             foto {
               childImageSharp {
-                fluid {
-                  base64
+                fixed(width: 185) {
+                  width
+                  height
                   src
                   srcSet
                 }
@@ -52,8 +53,8 @@ const Contact = () => (
 
       return (
         <div>
-          <img
-            src={`${foto.childImageSharp.fluid.src}`}
+          <Image
+            fixed={foto.childImageSharp.fixed}
             alt="portrait"
             style={styles.portrait}
           />

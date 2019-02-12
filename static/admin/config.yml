@@ -2,7 +2,7 @@ backend:
   name: github
   repo: hkfrei/phvd
 
-media_folder: static/images
+media_folder: src/images
 public_folder: /images
 
 collections:

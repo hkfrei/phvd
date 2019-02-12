@@ -1,5 +1,5 @@
 import React from "react";
-import eule from "../../static/images/eule.svg";
+import eule from "../images/eule.svg";
 
 const styles = {
   eule: {
