@@ -36,6 +36,7 @@ collections:
           - { label: Telefon, name: phone, widget: string }
           - { label: Mail, name: mail, widget: string }
           - { label: Linkedin, name: linkedin, widget: string }
+          - { label: Foto, name: foto, widget: hidden, default: image }
       - file: src/data/work/ausbildung.md
         label: Aus- und Weiterbildung
         name: ausbildung
