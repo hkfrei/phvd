@@ -1,12 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`
+    title: `PHVD`,
+    description: `Website of Philippe van Driel`,
+    author: `@chaeppu`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
+    {
+      // This is the image path for the uploaded images from netlify cms
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/images`,
+        name: "uploads"
+      }
+    },
+    // This is the image path for all other images
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,6 +23,7 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

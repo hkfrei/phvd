@@ -1,8 +1,11 @@
 backend:
   name: github
   repo: hkfrei/phvd
-
-media_folder: src/images
+# We have to upload to a static folder because there are
+# path problems otherwise. Images that must not be changed
+# by the cms can still live in other folders and therefore
+# beeing optimised by netlify
+media_folder: static/images
 public_folder: /images
 
 collections:
@@ -13,5 +16,4 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: type, label: Type, widget: select, options: [einzeln, gruppen] }
-      - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
