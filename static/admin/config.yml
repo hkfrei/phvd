@@ -25,7 +25,6 @@ collections:
         name: "contact"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Foto", name: "foto", widget: "image" }
           - { label: "Telefon", name: "phone", widget: string }
           - { label: "Mail", name: "mail", widget: "string" }
           - { label: "Linkedin", name: "linkedin", widget: "string" }
