@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import Jumbotron from "../components/jumbotron";
 import Layout from "../components/layout";
 import Content from "../components/content";
 import SEO from "../components/seo";
@@ -29,9 +28,8 @@ const LinkPage = data => {
       render={data => {
         const links = data.allMarkdownRemark.edges;
         return (
-          <Layout>
+          <Layout title="LINKS">
             <SEO title="Links" />
-            <Jumbotron title="Links" />
             <Content>
               {links.map(link => {
                 const { title, description, url } = link.node.frontmatter;

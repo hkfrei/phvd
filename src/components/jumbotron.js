@@ -7,12 +7,13 @@ const styles = {
   },
 
   jumbotron: {
+    alignItems: "center",
+    backgroundColor: "#cfb877", //"#e79f29"
     color: "white",
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
-    padding: `1.45rem 1.0875rem`,
-    backgroundColor: "#cfb877" //"#e79f29"
+    marginBottom: "52px",
+    padding: `1.45rem 1.0875rem`
   }
 };
 const Jumbotron = ({ title }) => (

@@ -1,9 +1,10 @@
 import { Link } from "gatsby";
 import React from "react";
+import Jumbotron from "../components/jumbotron";
 import phvd from "../images/phvd.svg";
 import "./header.css";
 
-const Header = ({ siteTitle }) => (
+const Header = ({ title }) => (
   <header>
     <div className="header">
       <Link
@@ -31,6 +32,7 @@ const Header = ({ siteTitle }) => (
         <img src={phvd} alt="phvd" className="headerImage" />
       </Link>
     </div>
+    <Jumbotron title={title} />
   </header>
 );
 

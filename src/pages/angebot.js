@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import Jumbotron from "../components/jumbotron";
 import Layout from "../components/layout";
 import Content from "../components/content";
 import SEO from "../components/seo";
@@ -9,8 +8,7 @@ import Divider from "@material-ui/core/Divider";
 
 const styles = {
   angebotHeader: {
-    fontSize: "30px",
-    padding: "20px 0 0 0"
+    fontSize: "1.5em"
   }
 };
 const AngebotPage = () => (
@@ -41,12 +39,11 @@ const AngebotPage = () => (
         angebot => angebot.node.frontmatter.type === "einzeln"
       );
       return (
-        <Layout>
+        <Layout title="ANGEBOT">
           <SEO title="Angebot" />
-          <Jumbotron title="ANGEBOT" />
           <Content>
             <h2 style={styles.angebotHeader}>Angebote für Einzelpersonen:</h2>
-            <h4>Ansatz: 100.- / h</h4>
+            <h3>Preis: 100.- / h</h3>
             {einzelAngebote.map(angebot => {
               const { html, frontmatter } = angebot.node;
               return (
@@ -59,8 +56,10 @@ const AngebotPage = () => (
             })}
 
             <Divider />
-            <h2 style={styles.angebotHeader}>Angebote für Firmen/Gruppen:</h2>
-            <h4>Ansatz: 200.- / h</h4>
+            <h2 style={{ ...styles.angebotHeader, marginTop: "50px" }}>
+              Angebote für Firmen/Gruppen:
+            </h2>
+            <h3>Preis: 200.- / h</h3>
             {gruppenAngebote.map(angebot => {
               const { html, frontmatter } = angebot.node;
               return (

@@ -15,7 +15,7 @@ const styles = {
     padding: "8px 0"
   }
 };
-const Layout = ({ children }) => (
+const Layout = ({ children, title }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -35,7 +35,7 @@ const Layout = ({ children }) => (
       const mailWritten = mail.replace("@", "(at)");
       return (
         <div>
-          <Header />
+          <Header title={title} />
           <div>
             <main>{children}</main>
             <Content>
