@@ -43,7 +43,6 @@ const AngebotPage = () => (
           <SEO title="Angebot" />
           <Content>
             <h2 style={styles.angebotHeader}>Angebote für Einzelpersonen:</h2>
-            <h3>Preis: 100.- / h</h3>
             {einzelAngebote.map(angebot => {
               const { html, frontmatter } = angebot.node;
               return (
@@ -59,7 +58,6 @@ const AngebotPage = () => (
             <h2 style={{ ...styles.angebotHeader, marginTop: "50px" }}>
               Angebote für Firmen/Gruppen:
             </h2>
-            <h3>Preis: 200.- / h</h3>
             {gruppenAngebote.map(angebot => {
               const { html, frontmatter } = angebot.node;
               return (
