@@ -15,7 +15,7 @@ const styles = {
 const Link = ({ title, description, url }) => (
   <Paper style={styles.linkPaper}>
     <h3>
-      <a href={url} style={styles.link}>
+      <a href={url} style={styles.link} targe="_blank">
         {title}
       </a>
     </h3>

@@ -6,6 +6,7 @@
   min-height: 80px;
   max-height: 80px;
   overflow: hidden;
+  padding: 0 12px;
 }
 .headerLink {
   color: black;
