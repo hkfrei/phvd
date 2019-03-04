@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Content from "./content";
 import Header from "./header";
+import Jumbotron from "../components/jumbotron";
 import "./layout.css";
 
 const styles = {
@@ -35,10 +36,11 @@ const Layout = ({ children, title }) => (
       const mailWritten = mail.replace("@", "(at)");
       return (
         <div>
-          <Header title={title} />
-          <div>
-            <main>{children}</main>
+          <Header />
+          <main className="main">
+            <Jumbotron title={title} />
             <Content>
+              {children}
               <footer style={styles.footer}>
                 © {new Date().getFullYear()}, Philippe van Driel{" | "}
                 <a style={styles.link} href={`tel:${phoneLink}`}>
@@ -50,7 +52,7 @@ const Layout = ({ children, title }) => (
                 </a>
               </footer>
             </Content>
-          </div>
+          </main>
         </div>
       );
     }}

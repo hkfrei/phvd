@@ -2,9 +2,6 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 const styles = {
-  aboutTitle: {
-    margin: 0
-  },
   ausbildungList: {
     fontSize: "18px"
   }
@@ -24,7 +21,7 @@ const About = () => (
     render={data => {
       return (
         <div>
-          <h2 style={styles.aboutTitle}>
+          <h2 className="homeContainer__about-title">
             {data.markdownRemark.frontmatter.title}
           </h2>
           <div

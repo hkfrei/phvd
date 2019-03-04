@@ -5,8 +5,14 @@
 }
 .homeContainer__contact,
 .homeContainer__about {
+  display: flex;
+  justify-content: center;
   width: 45%;
-  padding: 0 8px;
+  padding: 0 8px 16px 0;
+}
+
+.homeContainer__about-title {
+  margin: 0;
 }
 
 /* media queries */
@@ -14,5 +20,10 @@
   .homeContainer__about,
   .homeContainer__contact {
     width: 100%;
+  }
+
+  .homeContainer__about-title {
+    padding-top: 32px;
+    text-align: center;
   }
 }

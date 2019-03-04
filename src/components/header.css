@@ -40,16 +40,13 @@ a.headerLink.active {
 }
 @media screen and (max-width: 500px) {
   .headerImage {
-    width: 100px;
+    display: none;
   }
   .headerLink {
     margin: 0 8px;
   }
 }
 @media screen and (max-width: 400px) {
-  .headerImage {
-    display: none;
-  }
   .lastHeaderLink {
     flex-grow: 0;
   }
