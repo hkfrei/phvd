@@ -15,7 +15,12 @@ const styles = {
 const Link = ({ title, description, url }) => (
   <Paper style={styles.linkPaper}>
     <h3>
-      <a href={url} style={styles.link} target="_blank">
+      <a
+        href={url}
+        style={styles.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {title}
       </a>
     </h3>

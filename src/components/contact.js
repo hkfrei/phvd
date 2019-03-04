@@ -73,7 +73,12 @@ const Contact = () => (
             </a>
             <br />
             <Share style={{ maxWidth: "24px", maxHeight: "24px" }} />{" "}
-            <a style={styles.link} href={`${linkedin}`} target="_blank">
+            <a
+              style={styles.link}
+              href={`${linkedin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LinkedIn
             </a>
           </span>
